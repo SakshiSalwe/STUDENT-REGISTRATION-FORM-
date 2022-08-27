@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lets code-- codeathon</title>
+</head>
+
+<body bgcolor="sky blue">
+  <h2> STUDENT REGISTRATION FORM💻</h2>
+  
+  <div> 
+    
+  
+  <form>
+
+    <label for="full name"><b>FULLL NAME:</b> </label>
+    <input type="text" placeholder="enter your name" id="name" ><br><br>
+
+    <label for="COLLEGE:"><b>COLLEGE:</b></label>
+    <input type="text" placeholder="entet your collge name" id="college"><br><br>
+
+    <label for="branch"><b>BRANCH:</b></label>
+    <input type="text" placeholder="enter your branch" id="branch">
+    <br><br>
+
+    <label for="yog"><b>Y.O.G. :</b></label>
+    <input type="text" placeholder="enter your year of graduation" id="yog"><br><br>
+
+    <label for="email"><b>EMAIL:</b></label>
+    <input type="text" placeholder="enter email" id="email"><br><br>
+
+    <tr>
+      <td><b>SEX</b> :</td>
+      <td><input type="radio" name="sex" value="male" size="10">Male
+        <input type="radio" name="sex" value="Female" size="10">Female
+      </td>
+    </tr><br><br>
+
+    <button style="background-color: whitesmoke"   type="submit" id="btn"><b>SUBMIT</b></button>
+    <hr>
+    <br>
+    <span id="spanresult" style="color: white"> </span>
+
+  </form>
+  
+</div>
+  <script>
+
+    const btn = document.getElementById("btn").addEventListener("click" , showinfo); 
+
+    function showinfo(e) {
+      var name = document.getElementById("name").value;
+      var college = document.getElementById("college").value;
+      var branch = document.getElementById("branch").value;
+      var yog = document.getElementById("yog").value;
+      var email = document.getElementById("email").value;
+      var show ="Name:"+ name + "<br>" + 
+      "College:"+college + "<br>"+"Branch:"+branch + "<br>"+ "Year Of Graduation:"+yog + "<br> "+"Email:"+ email;
+      
+      document.getElementById('spanresult').innerHTML = show;
+      console.log(name, college, branch, yog, email);
+      e.preventDefault();
+    }
+
+    
+
+
+  </script>
+
+
+
+</body>
+</html>
